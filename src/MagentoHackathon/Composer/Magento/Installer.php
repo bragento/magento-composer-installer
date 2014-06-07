@@ -148,7 +148,7 @@ class Installer extends LibraryInstaller implements InstallerInterface
 
             $dir = rtrim(trim($extra['modman-root-dir']), '/\\');
             if (!is_dir($dir)) {
-                $dir = $this->vendorDir . "/$dir";
+                $dir = $this->vendorDir . DIRECTORY_SEPARATOR . $dir;
             }
             if (!is_dir($dir)) {
                 throw new \ErrorException("modman root dir \"{$dir}\" is not valid");
